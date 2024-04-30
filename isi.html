@@ -644,6 +644,18 @@
         });
       });
     });
+
+    var selectElement = document.querySelector('.konfirmasi');
+
+    // Menambahkan event listener untuk saat formulir di-submit
+    document.querySelector('form').addEventListener('submit', function(event) {
+        // Memeriksa apakah opsi yang dipilih adalah valid
+        if (!selectElement.value || selectElement.value === "") {
+            // Jika tidak valid, mencegah pengiriman formulir dan menampilkan pesan kesalahan
+            event.preventDefault();
+            alert("Harap pilih konfirmasi kehadiran.");
+        }
+    });
   </script>
 
   <img class="batasimageundangan5" src="aset/img/batas4.png" alt="">
